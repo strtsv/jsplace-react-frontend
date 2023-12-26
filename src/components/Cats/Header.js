@@ -1,32 +1,13 @@
 import React from "react";
 
-import $ from "jquery";
-import "../assets/js/jquery.easing.1.3.js";
-import "../assets/js/tmstickup.js";
-import "../assets/js/tmstickup.js";
-import "../assets/js/jquery.ui.totop.my.js";
-
-import i1 from "../assets/images/logo-default-174x48.png";
-import i2 from "../assets/images/logo-default-174x48.png";
-
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    $(document).ready(function() {
-      $(".rd-navbar").TMStickUp({});
-      $().UItoTop({
-        easingType: "easeOutQuad",
-        containerClass: "ui-to-top fa fa-angle-up",
-      });
-    });
-  }
   render() {
     return (
       <header className="section page-header">
         {}
         <div className="rd-navbar-wrap">
           <nav
-            className="rd-navbar rd-navbar-wide rd-navbar-original rd-navbar-static"
+            className="rd-navbar rd-navbar-wide"
             data-layout="rd-navbar-fixed"
             data-sm-layout="rd-navbar-fixed"
             data-md-layout="rd-navbar-fixed"
@@ -58,7 +39,7 @@ class Header extends React.Component {
                     <a className="brand" href="index.html">
                       <img
                         className="brand-logo-dark"
-                        src={i1}
+                        src="images/logo-default-174x48.png"
                         alt
                         width={174}
                         height={48}
@@ -66,7 +47,7 @@ class Header extends React.Component {
                       />
                       <img
                         className="brand-logo-light"
-                        src={i2}
+                        src="images/logo-default-174x48.png"
                         alt
                         width={174}
                         height={48}
@@ -104,7 +85,7 @@ class Header extends React.Component {
                         </li>
                       </ul>
                     </li>
-                    <li className="rd-nav-item">
+                    <li className="rd-nav-item active">
                       <a className="rd-nav-link" href="categories.html">
                         Categories
                       </a>
