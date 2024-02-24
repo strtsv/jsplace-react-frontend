@@ -3,8 +3,9 @@ import React from "react";
 import $ from "jquery";
 import "../assets/js/jquery.easing.1.3.js";
 import "../assets/js/tmstickup.js";
-import "../assets/js/tmstickup.js";
 import "../assets/js/jquery.ui.totop.my.js";
+
+import { WOW } from "../assets/js/wow.js";
 
 import i1 from "../assets/images/logo-default-174x48.png";
 import i2 from "../assets/images/logo-default-174x48.png";
@@ -18,6 +19,7 @@ class Header extends React.Component {
         easingType: "easeOutQuad",
         containerClass: "ui-to-top fa fa-angle-up",
       });
+      new WOW().init();
     });
   }
   render() {

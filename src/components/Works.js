@@ -7,15 +7,19 @@ import i2 from "../assets/images/home-2-585x542.jpg";
 class Works extends React.Component {
   componentDidMount() {
     new Swiper(".swiper-container", {
-      centeredSlides: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
+      speed: 1000,
+      loop: true,
       pagination: {
         el: ".swiper-pagination",
-        clickable: true,
+        clickable: true
       },
+      navigation: {
+        nextEl: ".custom-swiper-button-next",
+        prevEl: ".custom-swiper-button-prev"
+      },
+      autoplay: {
+        delay: 5000
+      }
     });
   }
   render() {
@@ -63,6 +67,7 @@ class Works extends React.Component {
             className="swiper-container swiper-slider swiper-slider-1"
             data-next=".custom-swiper-button-next"
             data-prev=".custom-swiper-button-prev"
+            data-autoplay={4856}
             data-loop="true"
           >
             <div className="swiper-wrapper">
@@ -70,14 +75,14 @@ class Works extends React.Component {
                 className="swiper-slide"
                 data-slide-bg={i1}
                 style={{
-                  backgroundImage: "url(" + i1 + ")",
+                  backgroundImage: "url(" + i1 + ")"
                 }}
               />
               <div
                 className="swiper-slide"
                 data-slide-bg={i2}
                 style={{
-                  backgroundImage: "url(" + i2 + ")",
+                  backgroundImage: "url(" + i2 + ")"
                 }}
               />
             </div>
